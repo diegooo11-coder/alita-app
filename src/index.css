@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono&display=swap');
+
+body {
+  background-color: 	#fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  color: #ee1a3b;
+  font-size: 14px;
+}
+
+.container-page-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+.container-page-2 {
+  display: flex;
+  background-color: #ffc2cd;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 8px;
+  border: 2px solid #ff6289;
+}
+
+.form h2 {
+  text-align: center;
+}
+
+.form img {
+  width: 200px;
+  height: auto;
+}
+
+.form,
+.container-letter {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-letter {
+  background-color: #ffc2cd;
+}
+
+.container-letter h2, p {
+  text-align: center;
+}
+
+.container-img-switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: auto;
+}
+
+
+
+.container-img-switcher img {
+  width: 300px;
+  height: 300px;
+  border-radius: 8px;
+}
