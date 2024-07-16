@@ -13,6 +13,11 @@ function App() {
     setSecretKey(event.target.value);
   };
 
+  const handleLogout = () => {
+    setIsAuthenticated(false)
+    setSecretKey('')
+  }
+
   const handleButtonClick = () => {
     if (secretKey === correctKey) {
       setIsAuthenticated(true);
@@ -24,24 +29,24 @@ function App() {
   return (
     <div className='container-page-1'>
       {!isAuthenticated ? (
-        <div className="form">
+        <form className="form">
           <img src={hellok} alt="" />
           <h2>¡Hola! Por favor, escribe tu clave secreta:</h2>
-          <TextField 
+          <TextField
             type='password'
-            label="Clave Secreta" 
-            variant="outlined" 
-            size='small' 
-            fullWidth 
+            label="Clave Secreta"
+            variant="outlined"
+            size='small'
+            fullWidth
             value={secretKey}
             onChange={handleInputChange}
           />
-          <Button sx={{ mt: 2 }} variant="contained" fullWidth onClick={handleButtonClick}>
+          <Button type='submit' sx={{ mt: 2 }} variant="contained" fullWidth onClick={handleButtonClick}>
             Ingresar
           </Button>
-        </div>
+        </form>
       ) : (
-        <FeelingPage />
+        <FeelingPage handleLogout={handleLogout} />
       )}
     </div>
   );

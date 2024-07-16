@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Button } from '@mui/material';
+import { Button, Stack } from '@mui/material';
 import ImageSwitcher from '../components/ImageSwitcher';
-import ChangeCircleOutlinedIcon from '@mui/icons-material/ChangeCircleOutlined';
+import CachedOutlinedIcon from '@mui/icons-material/CachedOutlined';
+import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
 
-export const FeelingPage = () => {
+export const FeelingPage = ({ handleLogout }) => {
     const [showLetter, setShowLetter] = useState(true);
 
     const toggleSection = () => {
@@ -23,13 +24,24 @@ export const FeelingPage = () => {
                     </p>
                 </div>
             ) : (
-                <div className="container-img-switcher">
-                    <ImageSwitcher></ImageSwitcher>
-                </div>
+                <ImageSwitcher></ImageSwitcher>
             )}
-            <Button sx={{ mt: 1.5 }} variant='contained' fullWidth onClick={toggleSection}>
-                <ChangeCircleOutlinedIcon></ChangeCircleOutlinedIcon>
-            </Button>
+            {
+                showLetter ? (
+                    <Stack spacing={1} direction={'row'} sx={{ width: "100%", mt: 1.5 }}>
+                        <Button sx={{ mt: 1.5 }} variant='contained' fullWidth onClick={handleLogout}>
+                            <PowerSettingsNewIcon></PowerSettingsNewIcon>
+                        </Button>
+                        <Button sx={{ mt: 1.5 }} variant='contained' fullWidth onClick={toggleSection}>
+                            <CachedOutlinedIcon></CachedOutlinedIcon>
+                        </Button>
+                    </Stack>
+                ) : (
+                    <Button sx={{ mt: 1.5 }} variant='contained' fullWidth onClick={toggleSection}>
+                        <CachedOutlinedIcon></CachedOutlinedIcon>
+                    </Button>
+                )
+            }
         </div>
     );
 };

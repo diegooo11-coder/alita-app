@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono&display=swap');
 
 body {
-  background-color: 	#fff;
+  background-color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   color: #ee1a3b;
-  font-size: 14px;
+  font-size: 12;
+  background-color: #ffc2cd;
 }
 
 .container-page-1 {
@@ -19,7 +20,7 @@ body {
 
 .container-page-2 {
   display: flex;
-  background-color: #ffc2cd;
+  background-color: #ff93ac;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -27,7 +28,7 @@ body {
   padding: 20px;
   margin-top: 40px;
   border-radius: 8px;
-  border: 2px solid #ff6289;
+  border: 1px solid #ff6289;
 }
 
 .form h2 {
@@ -50,24 +51,24 @@ body {
 
 .container-letter {
   background-color: #ffc2cd;
+  border-radius: 8px;
+  padding: 20px;
 }
 
-.container-letter h2, p {
+.container-letter h2,
+p {
   text-align: center;
 }
 
-.container-img-switcher {
-  display: flex;
-  justify-content: center;
+.img-switcher-container {
   align-items: center;
   width: 300px;
   height: auto;
 }
 
-
-
-.container-img-switcher img {
+.img-switcher-container img {
   width: 300px;
-  height: 300px;
+  height: 410px;
   border-radius: 8px;
+  object-fit: cover;
 }
